@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "931a7acf-12a6-46ba-9acc-66394a162d53",
+		"name": "carrinho-ifood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10174062"
+	},
+	"item": [
+		{
+			"name": "Atualizar sacola",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/ifood/sacolas/fecharSacola/1?formaPagamento=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"ifood",
+						"sacolas",
+						"fecharSacola",
+						"1"
+					],
+					"query": [
+						{
+							"key": "formaPagamento",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Sacola",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/ifood/sacolas/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"ifood",
+						"sacolas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Sacola",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"produtoId\" : 1,\r\n    \"quantidade\": 2,\r\n    \"idSacola\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/ifood/sacolas",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"ifood",
+						"sacolas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
